@@ -5,7 +5,7 @@
 
 unsigned long sof(unsigned long t, unsigned long a, unsigned long b) {
 
-	unsigned long result = 0;
+	unsigned long result = (a%2 == 0 ? 0 : a);
 	
 	while (b <= t) {
 		if (b % 2 != 0) result += b;
