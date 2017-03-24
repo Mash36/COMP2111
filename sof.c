@@ -5,9 +5,9 @@
 
 unsigned long sof(unsigned long t, unsigned long a, unsigned long b) {
 
-	unsigned long result = (a%2 == 0 ? 0 : a);
+	unsigned long result = ( a < t && a%2 != 0 ? a : 0); 
 	
-	while (b <= t) {
+	while (a < t && b <= t) {
 		if (b % 2 != 0) result += b;
 		b += a;
 		a = b - a;
